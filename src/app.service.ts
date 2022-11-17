@@ -45,8 +45,8 @@ export class AppService implements OnApplicationBootstrap {
 
       //if test not pass then wait 5s to try again and update counter
       if (!passTest) {
-        this.logger.warn('wait for 5m to retry test');
-        await new Promise((res) => setTimeout(res, 300000));
+        this.logger.warn('wait for 10s to retry test');
+        await new Promise((res) => setTimeout(res, 10000));
         retryCounter++;
       }
     } while (!passTest && retryCounter < 10);
