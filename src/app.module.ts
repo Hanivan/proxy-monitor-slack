@@ -5,12 +5,14 @@ import { AppService } from './app.service';
 import { PlaywrightModule } from '@libs/commons/playwright/playwright.module';
 import { SlackModule } from 'nestjs-slack';
 import { EnvKey } from '@libs/commons';
+import { ScheduleModule } from '@nestjs/schedule';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       envFilePath: ['.env', '.env.prod', '.env.dev', 'env.example'],
     }),
+    ScheduleModule.forRoot(),
     PlaywrightModule,
     SlackModule.forRootAsync({
       imports: [

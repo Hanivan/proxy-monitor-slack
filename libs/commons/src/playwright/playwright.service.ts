@@ -61,7 +61,7 @@ export class PlaywrightService implements OnApplicationBootstrap, OnModuleInit {
     do {
       //try to test browser
       try {
-        await this.testBrowser();
+        // await this.testBrowser();
         passTest = true;
       } catch (error) {
         //fail log error
@@ -167,7 +167,7 @@ export class PlaywrightService implements OnApplicationBootstrap, OnModuleInit {
     });
   }
 
-  private async testBrowser() {
+  async testBrowser() {
     const prevSet = this.cacheToFile;
 
     if (prevSet) {
