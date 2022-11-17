@@ -1,0 +1,4 @@
+export enum EnvKey {
+  WEBHOOK_URL = 'WEBHOOK_URL',
+  PROXY_SERVER = 'PROXY_SERVER',
+}
