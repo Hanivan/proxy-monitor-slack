@@ -121,7 +121,7 @@ export class AppService implements OnApplicationBootstrap {
       //if test not pass then wait 5s to try again and update counter
       if (!passTest) {
         this.logger.warn('wait for 1min to retry test');
-        await new Promise((res) => setTimeout(res, 1000));
+        await new Promise((res) => setTimeout(res, 60 * 1000));
         retryCounter++;
       } else {
         if (page && !page.isClosed()) {
